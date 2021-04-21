@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-Function: fn_spawnGarrisons
+Function: fn_spawnConvoy
 
 Description:
 	Spawns a convoy of vehicles and send it at destination.	
