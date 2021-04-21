@@ -26,8 +26,8 @@ Une mission générée dynamiquement, jouable soit à quelques joueurs (3-5) jou
 * Véhicules pour les joueurs (garage)
 * équipement nocturne
 * Faction hostile
-* Composition des forces hostiles (essnetiellement infanterie ou essentiellement blindés)
-* Niveau de renseingnements
+* Composition des forces hostiles (essentiellement infanterie ou essentiellement blindés)
+* Niveau de renseignements
 * Nombre d'hostiles (un peu, beaucoup, à la folie, etc.)
 * Fréquence des renforts hostiles
 
