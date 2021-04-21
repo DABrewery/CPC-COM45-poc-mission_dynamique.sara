@@ -1,0 +1,6 @@
+#include "Cfg\missionParams.hpp"
+#include "Cfg\CfgFunctions.hpp"
+#include "Cfg\hostileConfig.hpp"
+#include "Cfg\areasOfInterest.hpp"
+#include "Cfg\compositions.hpp"
+

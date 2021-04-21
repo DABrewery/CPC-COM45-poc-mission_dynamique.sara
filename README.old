@@ -1,0 +1,76 @@
+# poc-mission-dynamique
+
+## Le concept
+
+Une mission générée dynamiquement, jouable à 5 joueurs (ou plus, à définir si possible dans l'équilibrage) qui utilisent le module High Command et/ou contrôlent un groupe d'IA. Point d'attention : ne doit pas trop ressembler à une mission GdC "classique", sous peine de ne pas se différencier.
+
+## 3 modes de jeu
+
+* Conditions de victoire :
+  * Victoire majeure : les ennemis sont neutralisés et les joueurs ont perdu moins de 50% des effectifs
+  * Victoire mineure : les ennemis sont neutralisés et les joueurs ont perdu plus de 50% des effectifs
+  * Défaite mineure : les joueurs font retraite et ont perdu moins de 50% des effectifs
+  * Défaite majeure : retraite avec plus de 50% de pertes
+
+### Attaque -> les joueurs attaquent des positions ennemies
+
+L'imprévu : Le sel qui fait la différence :
+
+* Des renforts de diverses sortes et le plus imprévisible possible
+
+### Défense -> les joueurs doivent défendre des points clés dans une zone
+
+### Rush -> deux armées rushent pour controler une zone stratégique
+
+## Options
+
+* Guerre asymétrique : guérilla joueurs
+* Guerre asymétrique : guérilla IA
+
+### Choix des factions
+
+* les joueurs peuvent choisir les factions alliées et hostiles
+* choix du matériel pour les joueurs : à voir
+* module SSS pour le soutien aérien
+
+### Joueurs
+
+* Un CdO. Le CdO peut prendre la tête d'une des sections de combat
+* 4 chefs de section de combat :
+  * Section d'infanterie : 4 équipes de 8 hommes
+  * Section mécanisée : 2 méca et 6 à 9 hommes en fonction du méca
+  * Section blindée : 3 MBT ou 2 MBT et un anti-char
+
+#### Mode de commandement
+
+* Module High command + contrôle direct de groupes au choix.
+
+## Réalisation technique
+
+* On identifie sur les cartes des zones d'intérêt pour les modes de jeu attaque, défense ou rush
+* On créé des configurations pour ces zones d'intérêt
+* On génère dynamiquement le build
+
+### Zone d'attaque
+
+C'est le plus facile : on build à l'intérieur de la zone définie comme pour une mission classique. On ajoute du sel et des épices.
+
+### Zone de défense
+
+1. On identifie les axes par lesquels les hostiles peuvent donner l'assaut.
+2. On spawne les IA et on leur donne l'ordre d'assaut
+3. On ajoute de l'intelligence à l'assaut : l'IA envoie des forces aptes à taper convenablement l'ennemi
+
+### Zone de rush
+
+Comme la zone de défense, mais en plus, il faut donner les mêmes chances aux hostiles et aux joueurs pour arriver en premier sur la zone, sinon ça se transforme vite en attaque ou en défense. Idéalement, aucun des belligérants ne devrait pouvoir s'installer tranquillement.
+
+* Idée 1 : on fait en sorte que dans tous les cas, une petite avant-garde hostile soit présente sur site avant les joueurs (bof)
+* Idée 2 : on spawne les IA en fonction de l'avancée des joueurs (attention si ceux-ci décident d'envoyer de la reco)
+
+### Build dynamique
+
+Dans un marqueur de zone prédéfini, dont la configuration est établie à l'avance
+
+* Si le marqueur couvre une zone construite (ex. une base militaire, un ville), on cherche les points où spawner les unités et on y va. La zone est déclarée construite/non construite dans la configuration
+* Si le marqueur couvre une zone non construite, on identifie les points d'intérêts (peut-être déclarés dans la config) et on y spawne batiments et unités
