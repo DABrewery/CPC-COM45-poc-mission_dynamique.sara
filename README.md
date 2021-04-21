@@ -33,7 +33,7 @@ Une mission générée dynamiquement, jouable soit à quelques joueurs (3-5) jou
 
 ### Ce que ça fait à ce stade
 
-* Une FOB et tout les hostiles, dont des positions fortifiées, des armes fixes, patrouilles à pied ou en véhicules sont spawnées automatiquement sur une zone choisie au hasard (parmi un certain nombre de zones configurées)
+* Une FOB et tous les hostiles, dont des positions fortifiées, des armes fixes, patrouilles à pied ou en véhicules sont spawnées par code sur une zone choisie au hasard (parmi un certain nombre de zones configurées)
 * Les joueurs spawnent au choix, sauf dans la zone interdite.
 
 Et c'est parti !
