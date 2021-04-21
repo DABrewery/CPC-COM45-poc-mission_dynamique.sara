@@ -2,7 +2,7 @@
 
 ## Le concept
 
-Une mission générée dynamiquement, jouable qsoit à quelques joueurs (3-5) joueurs qui utilisent le module High Command et/ou contrôlent un groupe d'IA, soit à plus de joeurs avec ou sans IA alliées.
+Une mission générée dynamiquement, jouable soit à quelques joueurs (3-5) joueurs qui utilisent le module High Command et/ou contrôlent un groupe d'IA, soit à plus de joeurs avec ou sans IA alliées.
 
 ## 4 modes de jeu
 
